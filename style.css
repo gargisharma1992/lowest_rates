@@ -1,0 +1,182 @@
+#menu__toggle {
+  opacity: 0;
+}
+
+#menu__toggle:checked+.menu__btn {
+  display: none;
+}
+
+#menu__toggle:checked~.menu__box {
+  left: 0 !important;
+}
+
+.menu__btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  transition-duration: .25s;
+}
+
+.menu__btn>span::before {
+  content: '';
+  top: -8px;
+}
+
+.menu__btn>span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu__box {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #FFF;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+}
+
+.menu__item {
+  display: block;
+  padding: 24px 24px;
+  color: #333;
+  font-size: 24px;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+
+.menu__item:hover {
+  background-color: #C8C8C8;
+}
+
+.hamburger-menu p {
+  text-align: center;
+  color: grey;
+  font-size: 24px
+}
+
+.hamburger-menu p>span {
+  float: right;
+}
+
+
+
+.column {
+  margin-bottom: 50px;
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+
+.column p {
+  text-align: center;
+  font-size: 24px
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+}
+
+section {
+  padding: 30px 0px 30px 0px;
+  text-align: center;
+}
+
+
+section#aboutus > p {
+  font-size: 20px;
+}
+
+.blogImg {
+  vertical-align: middle;
+  height: 22px;
+  width: 22px
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.col {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: auto;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+div#insuranceTypes>p {
+  float: left;
+  color: white;
+  display: inline-block;
+  background: #4e4545;
+  display: inline-block;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-right: 8px;
+  padding: 0px 8px 0px 8px;
+}
+
+/* Media queries for different screens */
+@media only screen and (max-width: 600px) {
+
+  .column,
+  .col {
+    width: 100% !important;
+  }
+
+  .coin_image {
+    height: 100%;
+    width: 100%;
+  }
+
+  section#footer {
+    text-align: left;
+  }
+
+  section#footer>p {
+    font-size: 20px;
+  }
+
+  .menu__item:hover {
+    background-color: #C8C8C8;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
